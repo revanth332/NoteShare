@@ -7,12 +7,23 @@ var mongoose = require("mongoose");
 const fs = require('fs');
 const port = process.env.PORT || 3000;
 var bodyParser=require("body-parser");
+
+const connectDB = async () => {
+    try {
+      const conn = await mongoose.connect(process.env.DATABASE);
+      console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+      console.log(error);
+      process.exit(1);
+    }
+  }
+
 // mongoose.connect(process.env.DATABASE).then(()=>{
 //     console.log("DB connected!");
 // });
-mongoose.connect('mongodb://localhost:27017/notes').then(()=>{
-    console.log("DB connected!");
-});
+// mongoose.connect('mongodb://localhost:27017/notes').then(()=>{
+//     console.log("DB connected!");
+// });
 
 
 var NotesSchema = new mongoose.Schema({
@@ -125,6 +136,11 @@ router.post("/find",(req,res)=>{
 })
 app.use('/',router);
 
-app.listen(port,()=>{
-    console.log('web server is listening at port '+port);
-});
+connectDB().then(() => {
+    app.listen(port, () => {
+        console.log("listening for requests");
+    })
+})
+// app.listen(port,()=>{
+//     console.log('web server is listening at port '+port);
+// });
