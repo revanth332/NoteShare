@@ -1,0 +1,118 @@
+.container2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #333637;
+    margin-top:20px;
+    font-size:20px;
+}
+.item-container{
+    /* border:1px solid white; */
+    margin:10px;
+    /* width:500px; */
+    padding:20px;
+    border-radius: 10px;
+    background-color: #1e2021;
+    width:80vw;
+    overflow-x: scroll;
+    color:#dcdcdc;
+    letter-spacing: 1.2;
+    font-family:monospace;
+}
+.item-container::-webkit-scrollbar {
+    display: none; /* for chrome */
+  }
+  .item-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+.head3{
+    color:rgb(236, 164, 31);;
+    border-radius: 5px;
+    padding:5px;
+}
+
+.buttons{
+    /* border:1px solid black; */
+    margin-top:15px;
+}
+.button{
+    padding:5px;
+    border:none;
+    border-radius: 5px;
+    width:100px;
+    background-color: transparent;
+    border:1px solid #f46e56;
+}
+.button-copy{
+    padding:10px;
+    border-radius: 5px;
+    width:130px;
+    background-color: transparent;
+    border:1px solid #47e647;
+    color:#47e647;
+    
+}
+.button a{
+    text-decoration: none;
+    color:#f46e56
+}
+.copied{
+    background-color:#238923;
+    color:white;
+}
+.deleted{
+    background-color: #c2452f;
+    color:white;
+}
+.down{
+    position:fixed;
+    border-radius:50%;
+    background-color:blueviolet;
+    color:white;
+    height:50px;
+    width:50px;
+    top:90px;
+    right:5px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bolder;
+    font-size:28px;
+}
+.down:hover{
+    background-color: rgb(89, 23, 151);
+}
+.dummy{
+    color:white;
+    text-align:center;
+}
+.down a{
+    color:white;
+}
+.header{
+    /* border:1px solid white; */
+    display:flex;
+    justify-content:center;
+}
+.head-box{
+    /* border:1px solid white; */
+    display:flex;
+    justify-content:space-between;
+    width:85vw;
+}
+.search{
+    margin:0;
+}
+/* @media (max-width:500px){
+    .button-copy,.button{
+        font-size:23px;
+        border-width:3px;
+        padding:10px;
+    }
+    .head3{
+        border-width:3px;
+        padding:10px;
+    }
+} */

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharekaro</title>
+    style 
+        include ../static/index.css
+</head>
+<body>
+    div.header 
+        div.head-box
+            div.links
+                h2.head ShareKaro
+                    h4 
+                        a(href="/home") Notes
+div.container 
+    form(action="/home", method="post") 
+        div.title-input
+            input.title(type="text" name="title" placeholder="Enter the title" required)
+        div.context-input 
+            textarea.context(name="context", cols="30", rows="10" required) 
+        div.submit-input 
+            input.submit(type="submit" value="Submit")
+</body>
+</html>

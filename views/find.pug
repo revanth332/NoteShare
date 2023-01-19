@@ -1,0 +1,27 @@
+html 
+    head 
+        title sharenotes 
+        style 
+            include ../static/index.css
+            include ../static/home.css
+    body 
+        div.down 
+            a(href="#dummy") &darr;
+        div.header 
+            div.head-box
+                div.links
+                    h2.head ShareKaro
+                    h4 
+                        a(href="/") Home
+                    h4 
+                        a(href="/home") Notes
+        div.container2 
+            each item in data 
+                div.item-container 
+                    h2.head3 #{item.title}
+                    div.context-data #{item.context}
+                    div.buttons   
+                        button.button-copy Copy
+        div.dummy &copy; Copy Right by Revanth
+        script 
+            include ../static/home.js
