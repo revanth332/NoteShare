@@ -57,6 +57,9 @@ router.get('/',(req,res) => {
     res.render("index.pug");
 });
 
+router.get('/hel',(req,res)=>{
+    res.send("helo");
+});
 
 router.post('/home',(req,res) => {
     var data = new note(req.body);
